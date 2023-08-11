@@ -30,10 +30,12 @@ def biped_defaults(*args, **kwargs):
     bpy.data.objects["rig"].pose.bones["upper_arm_parent.L"]["IK_FK"]
     for a_bone in UI_hand_bones:
         target_rig.pose.bones[a_bone]["IK_FK"] = 1.0
+        target_rig.pose.bones[a_bone]["IK_Stretch"] = 0.0
 
     for a_bone in UI_leg_bones:
         target_rig.pose.bones[a_bone]["pole_parent"] = 6
         target_rig.pose.bones[a_bone]["IK_parent"] = 2
+        target_rig.pose.bones[a_bone]["IK_Stretch"] = 0.0
 
 
 biped_defaults()
