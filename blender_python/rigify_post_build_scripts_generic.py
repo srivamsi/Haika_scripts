@@ -37,5 +37,23 @@ def biped_defaults(*args, **kwargs):
         target_rig.pose.bones[a_bone]["IK_parent"] = 2
         target_rig.pose.bones[a_bone]["IK_Stretch"] = 0.0
 
+def follow_rotation_drivers(*args,**kwargs):
 
-biped_defaults()
+    parents = []
+    children = [[]]
+    
+    for a_parent in parents:
+        children = a_parent.children_recursive
+        
+        for a_child in children:
+            
+            if a_child.name in parents:
+                continue
+    
+    b = bpy.context.active_bone
+    for a_child in b.children_recursive:
+        print(a_child.constraints)
+    
+    
+
+follow_rotation_drivers()
