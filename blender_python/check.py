@@ -1,3 +1,2 @@
-a = [1,2,3]
-
-print(type(a[0]))
+a = 'adhohell_othere_l'
+print(a.split('_',)[0])
